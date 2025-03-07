@@ -12,27 +12,30 @@
             box-sizing: border-box;
         }
 
-        /* Corpo da página */
+       /* Corpo da página */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1a1a1a, #4b4b4b);
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;  /* Modificado de center para flex-start para garantir que o conteúdo se alinhe no topo */
+            min-height: 100vh;  /* Altere para min-height em vez de height para permitir que o conteúdo cresça */
             color: #fff;
+            overflow-y: auto;  /* Isso garante que a barra de rolagem seja ativada quando necessário */
         }
-
+        
         /* Container do formulário */
         .container {
             background: rgba(0, 0, 0, 0.7);
-            padding: 40px; /* Aumentado para mais espaçamento interno */
+            padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             width: 100%;
-            max-width: 800px; /* Aumentado o tamanho máximo */
+            max-width: 800px;
             backdrop-filter: blur(10px);
-            min-width: 500px; /* Largura mínima garantida */
+            min-width: 500px;
+            margin: 0 auto; /* Garante que o container esteja centralizado */
+            box-sizing: border-box;
         }
 
         /* Título */
